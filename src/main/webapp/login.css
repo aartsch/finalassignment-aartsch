@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+section{
+    padding: 0 100px;
+    height : 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    border-radius: 25px;
+    max-width: 600px;
+    height: 250px;
+    padding : 75px;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+
+
+}
+
+h1{
+    text-align: center;
+    padding:0 0 20px 0;
+
+    border-bottom: 1px solid darkorange;
+}
+
+input{
+    align-items: center;
+    height: 20px;
+    margin-bottom:5px;
+}
+
+button{
+    margin-top:40px;
+    height: 20px;
+    width:100%
+}
+.wachtwoordinput{
+    position:absolute;
+    right:42%;
+}
+
+.registreer{
+    position:absolute;
+    top: 59%;
+    right:46%;
+}
