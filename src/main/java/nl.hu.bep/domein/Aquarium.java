@@ -1,6 +1,7 @@
 package nl.hu.bep.domein;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Aquarium {
 //    private static Aquarium deAquarium;
@@ -10,8 +11,8 @@ public class Aquarium {
     private int hoogte;
     private String bodemsoort;
     private String watersoort;
-    private static ArrayList<Ornament> ornamenten;
-    private static ArrayList<Bewoner> bewoners;
+    private List<Ornament> ornamenten = new ArrayList<>();
+    private List<Bewoner>  bewoners = new ArrayList<>();
 
 //    public static Aquarium getAquarium() {
 //        return deAquarium;
@@ -31,10 +32,16 @@ public class Aquarium {
         bewoners.add(nweBewoner);
 
     }
+
+    public List<Ornament> getOrnamenten() {
+        return ornamenten;
+    }
+
     public void voegOrnamentToe(Ornament nweOrnament) {
         ornamenten.add(nweOrnament);
-
     }
+
+
 
     public String getWatersoort() {
         return watersoort;

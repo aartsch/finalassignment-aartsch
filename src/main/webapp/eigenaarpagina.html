@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href= "beheerderpagina.css">
+    <link rel="stylesheet" href= "aquariumpagina.css">
 </head>
 <body>
-<label id="eigenaarnaam">Jan</label>
+<fieldset class = "fieldset">
 <h3>Verwijder Aquarium</h3>
 <form id="DELETEEigenaarForm" method="post">
     <label for="deleteeigenaar">Aquarium:</label><input type="text" id="deleteeigenaar" name="name"/>
     <input type="button" id="deleteeigenaarbutton" value="verwijder!"/>
 </form>
-<div id = "allAfspraken" ></div>
-<script> src="eigenaarpagina.js"</script>
+</fieldset>
+<div>
+<form id="POSTbewoner" method="post">
+    <label for="soortnaam">Soortnaam:</label><input type="text" id="soortnaam" name ="name"/>
+    <label for="kleurnaam">Kleurnaam:</label><input type="text" id="kleurnaam" name ="name"/>
+    <label for="aantal">Aantal:</label><input type="text" id="aantal" name ="name"/>
+    <label for="groepsDier">Groepsdier:</label><input type="text" id="groepsDier" name ="name"/>
+    <label for="type">Type:</label><input type="text" id="type" name ="name"/>
+    <input type="button" id="postbewonerButton" value="Voeg bewoner toe"/>
+</form>
+</div>
+<div>
+<form id="POSTtoebehoren" method="post">
+    <label for="model">Model:</label><input type="text" id="model" name ="name"/>
+    <label for="serienummer">Serienummer:</label><input type="text" id="serienummer" name ="name"/>
+    <label for="omschrijving">Omschrijving:</label><input type="text" id="omschrijving" name ="name"/>
+    <input type="button" id="posttoebehorenButton" value="Voeg toebehoren toe"/>
+</form>
+</div>
+<div>
+<form id="POSTAquarium" method="post">
+    <label for="naam">Naam:</label><input type="text" id="naam" name ="name"/>
+    <label for="lengte">Lengte:</label><input type="text" id="lengte" name ="name"/>
+    <label for="breedte">Breedte:</label><input type="text" id="breedte" name ="name"/>
+    <label for="hoogte">Hoogte:</label><input type="text" id="hoogte" name ="name"/>
+    <label for="bodemsoort">Bodemsoort:</label><input type="text" id="bodemsoort" name ="name"/>
+    <label for="watersoort">Watersoort:</label><input type="text" id="watersoort" name ="name"/>
+    <input type="button" id="postaquariumButton" value="Voeg aquarium toe"/>
+</form>
+</div>
+<script src = "eigenaarpagina.js"> </script>
 </body>
 </html>

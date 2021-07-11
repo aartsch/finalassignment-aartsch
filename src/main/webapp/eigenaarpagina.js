@@ -1,19 +1,30 @@
-document.querySelector("#deleteaquariumbutton").addEventListener("click", function () {
-    let eigenaar = "achternaam";
+document.querySelector("#postbewonerButton").addEventListener("click", function () {
+    var formData = new FormData(document.querySelector("#POSTbewoner"));
+    var encData = new URLSearchParams(formData.entries());
 
-    fetch("restservices/aquarium/"+ eigenaar, {method: 'DELETE'})
+    fetch("/restservices/bewoners" , {method: 'POST', body: encData})
         .then(response => console.log(response));
 });
 
+document.querySelector("#posttoebehorenButton").addEventListener("click", function () {
+    var formData = new FormData(document.querySelector("#POSTtoebehoren"));
+    var encData = new URLSearchParams(formData.entries());
 
+    fetch("/restservices/toebehorens", {method: 'POST', body: encData})
+        .then(response => console.log(response));
+});
 
-fetch("/restservices/afspraken"+ eigenaar, fetchOptions).then(function (response) {
-    if (response.ok) return response.json();
-}).then(myJson => {
-    let afspraakDiv = document.querySelector("#allAfspraken");
-    for (let afspraak of myJson) {
-        afspraakDiv.innerHTML = afspraakDiv.innerHTML + "datum: " + afspraak.datum + " afspraakID: " + afspraak.id + " klant: " + afspraak.klant +  " afspraakdetails: " + afspraak.afspraakdetails + " Gewerkte uren: " + afspraak.urenGewerkt + " Urengevalideerd: " + afspraak.urenGevalideerd + "<br/>";
-    }
+document.querySelector("#postaquariumButton").addEventListener("click", function () {
+    var id = "achternaam"
+    var formData = new FormData(document.querySelector("#POSTAquarium"));
+    var encData = new URLSearchParams(formData.entries());
 
-}).catch(error => console.log(error))
+    fetch("/restservices/aquarium/" + id, {method: 'POST', body: encData})
+        .then(response => console.log(response));
+});
 
+document.querySelector("#deleteaquariumbutton").addEventListener("click", function () {
+    let eigenaar = document.querySelector("#deleteeigenaarbutton").value;
+    fetch("/restservices/aquarium/"+ eigenaar, {method: 'DELETE'})
+        .then(response => console.log(response));
+});

@@ -12,12 +12,13 @@ public class AquariumManager {
         return deAquariumManager;
     }
     private String installatienaam;
-    private static ArrayList<Eigenaar> alleEigenaren;
-    private static ArrayList<Toebehoren> alleToebehoren;
-    private static ArrayList<Bewoner> alleBewoners;
+    private  static List<Eigenaar> alleEigenaren = new ArrayList<>();
+    private  static List<Toebehoren> alleToebehoren = new ArrayList<>();
+    private  static List<Bewoner> alleBewoners = new ArrayList<>();
 
     public AquariumManager(String installatienaam) {
         this.installatienaam = installatienaam;
+
     }
     public void voegEigenaarToe(Eigenaar nweEigenaar) {
         alleEigenaren.add(nweEigenaar);
@@ -35,7 +36,7 @@ public class AquariumManager {
         return Collections.unmodifiableList(alleEigenaren);
     }
 
-    public static Eigenaar getEigenaarByName(String achternaam) {
+    public Eigenaar getEigenaarByName(String achternaam) {
         Eigenaar result = null;
 
         for (Eigenaar eigenaar : alleEigenaren) {
