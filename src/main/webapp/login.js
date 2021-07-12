@@ -8,9 +8,9 @@ function login() {
                 return response.json(); //body will be json
             else throw "Wrong username / password"; //there is no body, just throw the error
         })
-        .then(myJson => window.sessionStorage.setItem("myJWT", myJson.JWT)) //present in the JsonBody
+        .then(myJson => window.sessionStorage.setItem("myJWT", myJson.JWT) + alert("u bent succesvol ingelogd")) //present in the JsonBody
         // .then(window.location.href="beheerderpagina.html")
-        .catch(error => console.log(error)) //will log Wrong username/password if !response.ok
+        .catch(error => console.log(error) + alert("verkeerd wachtwoord/ gebruikersnaam")) //will log Wrong username/password if !response.ok
 }
 
 document.querySelector("#loginbutton").addEventListener("click", login);

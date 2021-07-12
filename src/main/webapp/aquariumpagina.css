@@ -1,7 +1,7 @@
 #allAfspraken{
     position: absolute;
     top: 8%;
-    right:79%;
+    right:57%;
     width: 250px;
     height: 100px;
     background: rgba(255,255,255,.2);
@@ -15,5 +15,64 @@
 
 #Aquariumheader{
     position:absolute;
-    right:93%;
+    right:65%;
+}
+#Toebehorenheader{
+    position:absolute;
+    top: 33%;
+    right:87%;
+}
+
+#Bewonerheader{
+    position:absolute;
+    top: 33%;
+    right:65%;
+}
+
+#Ornamentheader{
+    position:absolute;
+    top: 33%;
+    right:43%;
+}
+
+#Toebehoren{
+    position: absolute;
+    top: 38%;
+    right:79%;
+    width: 250px;
+    height: 100px;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    padding : 75px;
+    float: left;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+#Bewoner{
+    position: absolute;
+    top: 38%;
+    right:35%;
+    width: 250px;
+    height: 100px;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    padding : 75px;
+    float: left;
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+#Ornamenten{
+    position: absolute;
+    top: 38%;
+    right:57%;
+    width: 250px;
+    height: 100px;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.8);
+    padding : 75px;
+    float: left;
+    margin-bottom: 20px;
+    border-radius: 25px;
 }
