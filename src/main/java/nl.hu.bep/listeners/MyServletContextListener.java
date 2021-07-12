@@ -26,7 +26,7 @@ public class MyServletContextListener implements ServletContextListener {
             SecurityManager.getInstance().registerUser(new MyUser("beheerder", "beheerder", "beheerder"));
             AquariumManager aq1 = new AquariumManager("aq2016");
             Eigenaar jan = new Eigenaar("Jan", "achternaam");
-            Bewoner vis = new Bewoner("goudvis", "rood", 5, "Ja", 2);
+            Bewoner vis = new Bewoner("goudvis", "rood", 5, true, 2);
             Toebehoren boom = new Toebehoren("Aquarium21", 25, "boom in aquarium");
             Ornament ornament1 = new Ornament("ornament1", "ornament voor aquarium", "rood", true);
             aq1.voegEigenaarToe(jan);

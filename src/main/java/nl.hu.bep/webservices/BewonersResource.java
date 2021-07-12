@@ -14,7 +14,7 @@ public class BewonersResource {
 
     @POST
     @Produces(MediaType.APPLICATION_JSON)
-    public Response voegBewonerToe(@FormParam("soortnaam") String soortnaam, @FormParam("kleurnaam")String kleurnaam, @FormParam("aantal") int aantal, @FormParam("groepsDier") String groepsDier, @FormParam("type") int type) {
+    public Response voegBewonerToe(@FormParam("soortnaam") String soortnaam, @FormParam("kleurnaam")String kleurnaam, @FormParam("aantal") int aantal, @FormParam("groepsDier") boolean groepsDier, @FormParam("type") int type) {
         if ("".equals(soortnaam)) {
             return Response.status(Response.Status.CONFLICT)
                     .entity(new AbstractMap.SimpleEntry<>("message", "name is empty"))

@@ -1,0 +1,1 @@
+1. alle buttons die je klikt geven een request statuscode weer op de front end
