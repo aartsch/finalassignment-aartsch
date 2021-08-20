@@ -21,7 +21,12 @@ public class Eigenaar {
     }
 
     public void voegAquariumToe(Aquarium nweAquarium) {
-        aquariua.add(nweAquarium);
+        for (int i = 0; i < aquariua.size(); i++) {
+            if (!nweAquarium.equals(aquariua.get(i))) {
+                aquariua.add(nweAquarium);;
+            }
+
+        }
     }
 
     public static boolean removeAquarium(String aquariumName) {
@@ -37,6 +42,23 @@ public class Eigenaar {
             aquariua.remove(foundAquarium);
             return true;
         } else return false;
+    }
+
+    public boolean equals(Object andereObject) {
+        boolean gelijkeObjecten = false; // blijft false tenzij:
+
+        if (andereObject instanceof Eigenaar) {
+            Eigenaar andereEigenaar = (Eigenaar) andereObject;
+
+            if (this.voornaam.equals(andereEigenaar.voornaam) &&
+                    this.achternaam.equals(andereEigenaar.achternaam)) {
+
+
+                gelijkeObjecten = true;
+            }
+        }
+
+        return gelijkeObjecten;
     }
 
     public List<Aquarium> getAquarium() {

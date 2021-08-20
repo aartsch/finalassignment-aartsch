@@ -1,1 +1,2 @@
 1. alle buttons die je klikt geven een request statuscode weer op de front end
+2. als deze statuscodes niet een 404 of 503 bevatten dan werkt de applicatie

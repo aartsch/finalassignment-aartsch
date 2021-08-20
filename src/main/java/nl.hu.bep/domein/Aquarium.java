@@ -28,6 +28,7 @@ public class Aquarium {
     }
 
 
+
     public void voegBewonerToe(Bewoner nweBewoner) {
         bewoners.add(nweBewoner);
 
@@ -38,7 +39,11 @@ public class Aquarium {
     }
 
     public void voegOrnamentToe(Ornament nweOrnament) {
-        ornamenten.add(nweOrnament);
+        for (int i = 0; i < ornamenten.size(); i++) {
+            if (!nweOrnament.equals(ornamenten.get(i))) {
+                ornamenten.add(nweOrnament);
+            }
+        }
     }
 
 
@@ -66,4 +71,19 @@ public class Aquarium {
     public String getNaam() {
         return naam;
     }
+
+    public boolean equals(Object andereObject) {
+        boolean gelijkeObjecten = false; // blijft false tenzij:
+
+        if (andereObject instanceof Aquarium) {
+            Aquarium andereAquarium = (Aquarium) andereObject;
+
+            if (this.naam.equals(andereAquarium.naam)) {
+                gelijkeObjecten = true;
+            }
+
+        }
+        return gelijkeObjecten;
+    }
 }
+

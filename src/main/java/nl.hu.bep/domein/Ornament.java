@@ -13,6 +13,20 @@ public class Ornament {
         this.kanOpLuchtPomp = kanOpLuchtPomp;
     }
 
+    public boolean equals(Object andereObject) {
+        boolean gelijkeObjecten = false; // blijft false tenzij:
+
+        if (andereObject instanceof Ornament) {
+            Ornament andereOrnament = (Ornament) andereObject;
+
+            if (this.naam.equals(andereOrnament.naam)) {
+                gelijkeObjecten = true;
+            }
+
+        }
+        return gelijkeObjecten;
+    }
+
 
 }
 

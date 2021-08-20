@@ -7,6 +7,8 @@ public class Bewoner {
     private boolean groepsDier;
     private int type;
 
+
+
     public Bewoner(String soortnaam, String kleurnaam, int aantal, boolean groepsDier, int type) {
         this.soortnaam = soortnaam;
         this.kleurnaam = kleurnaam;
@@ -14,4 +16,8 @@ public class Bewoner {
         this.groepsDier = groepsDier;
         this.type = type;
     }
+    public int getAantal() {
+        return aantal;
+    }
+
 }
